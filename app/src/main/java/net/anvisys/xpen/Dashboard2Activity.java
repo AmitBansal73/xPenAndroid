@@ -156,7 +156,7 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
             if (((ToggleButton) view).isChecked()) {
                 // handle toggle on
                 ExpenseStatus.setText("My Expense");
-                txtInProgCount.setText("No of activity: " + ACount);
+                txtInProgCount.setText("No of activity: " );
                 txtInProgress.setText(currFormat.format(EnpenseValue));
                 txtApprovedCount.setText("No of activity: " + ACount);
                 txtApproved.setText(currFormat.format(EnpenseValue));
