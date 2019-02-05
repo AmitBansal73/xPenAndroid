@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/managerExp"
+    android:background="#fff"
+    android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/projectExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sell/Purchage Expenses"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:padding="3dp"
+            />
+        <LinearLayout
+            android:id="@+id/payable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/projectExp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/Payable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payable "
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/nblue"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtInPayCount"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="No.of Invoice: 2 "
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtpayble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs250000 "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/Receivable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receivable "
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/green"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtReceivedInv"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" No.of Invoice: 3 "
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txtReceived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Rs360000 "
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

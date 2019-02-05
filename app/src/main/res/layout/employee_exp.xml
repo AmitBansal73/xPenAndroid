@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/employeeExp"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/personal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/ExpenseStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Status"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:padding="3dp"
+            />
+        <ToggleButton
+            android:id="@+id/togglebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textOn=" Project Expense "
+            android:textOff=" personal Expense "
+            android:textColor="#fff"
+            android:backgroundTint="@color/mblue"
+            android:background="@drawable/round"
+            android:onClick="onToggleClicked"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ExpenseStatus"
+            />
+        <LinearLayout
+            android:id="@+id/inprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ExpenseStatus"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+            <TextView
+                android:id="@+id/Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InProgress "
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="#3f51b5"
+                android:padding="5dp"
+                />
+                <TextView
+                    android:id="@+id/txtInProgCount"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text=" No.of activity: 3 "
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            <TextView
+                android:id="@+id/txtInProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs16000 "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:gravity="end"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/Submitted1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submitted "
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/orange1"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtSubCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" No. of activity: 5 "
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtSubmitted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Rs36000 "
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/Aprroved1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Approved "
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/green"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtApprovedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" No. of activity: 7 "
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/txtApproved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Rs50000 "
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:id="@+id/pie_chart"
+            app:layout_constraintStart_toStartOf="@id/inprogress"
+            app:layout_constraintTop_toBottomOf="@id/inprogress"
+            >
+        </com.github.mikephil.charting.charts.PieChart>
+        <com.numetriclabz.numandroidcharts.SemiCircle
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="0dp"
+            android:id="@+id/semi_circle_chart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:semiInnerCircleRatio="0"
+            app:semi_circle="false"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/showLocalData"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/pie_chart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pie_chart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Local Data"
+            android:textColor="@color/white"
+            android:background="@drawable/round"
+            android:backgroundTint="@color/mblue"
+            android:onClick="OnAction"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
