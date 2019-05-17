@@ -1,7 +1,7 @@
 package net.anvisys.xpen.Common;
 
 public class APP_CONST {
-    public static final String APP_SERVER_URL ="http://www.kevintech.in/GAService/";
+    public static final String APP_SERVER_URL ="http://www.kevintech.in/xPen-WebApi/";
 
     public static final String SESSION_NAME = "GAS";
 
