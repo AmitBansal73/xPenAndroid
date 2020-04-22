@@ -36,7 +36,7 @@ public class ProjectFragment extends Fragment {
     private ProjectAdapter mAdapter;
     LinkedHashMap<Integer, ProjectData> projectList = new LinkedHashMap<Integer, ProjectData>();
     List<ProjectData> activityData;
-    public ListenerInterface listener;
+    public static ListenerInterface listener;
 
 
 
@@ -236,4 +236,10 @@ public class ProjectFragment extends Fragment {
             }
         }
     }
+
+    public static void RegisterListener(ListenerInterface prjListener)
+    {
+       listener = prjListener;
+    }
+
 }

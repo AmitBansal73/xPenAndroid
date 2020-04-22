@@ -85,6 +85,10 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
     View viewDashboard;
     Expense exp;
     int EnpenseValue =0,ACount=0;
+
+    View viewProjectTab, viewActivityTab;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,6 +129,10 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
         rbProject = findViewById(R.id.rbProject);
         rg = findViewById(R.id.rg);
 
+
+        viewProjectTab = findViewById(R.id.viewProjectTab);
+        viewActivityTab = findViewById(R.id.viewActivityTab);
+
        viewDashboard = findViewById(R.id.viewDashboard);
 
 
@@ -139,6 +147,21 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
             rgSelection.setVisibility(View.GONE);
         }
 
+        rgSelection.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(rbActivity.isChecked())
+                {
+                    viewProjectTab.setVisibility(View.GONE);
+                    viewActivityTab = findViewById(View.VISIBLE);
+                }
+                else if(rbProject.isChecked()){
+                    viewProjectTab.setVisibility(View.VISIBLE);
+                    viewActivityTab = findViewById(View.GONE);
+                }
+            }
+        });
+
         currFormat = NumberFormat.getCurrencyInstance();
         currFormat.setCurrency(Currency.getInstance("INR"));
 
@@ -149,6 +172,9 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
         CreateExpenseChart();
         CreateDailyExpChart();
     }
+
+
+
 
     public void onToggleClicked(View view) {
         GetDashboardData();
@@ -249,7 +275,7 @@ public class Dashboard2Activity extends AppCompatActivity implements ListenerInt
     public void OnAction(View v)
     {
         int id = v.getId();
-        if(id==R.id.actionAddExpense)
+        if(id==R.id.actionAddActivityExpense)
         {
             Intent newExpenseIntent = new Intent(Dashboard2Activity.this, AddExpenseActivity.class);
             newExpenseIntent.putExtra("Type", "Activity");

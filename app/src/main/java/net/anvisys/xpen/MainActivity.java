@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import net.anvisys.xpen.Common.APP_VARIABLES;
 import net.anvisys.xpen.Common.Session;
+import net.anvisys.xpen.HomePage.HomeActivity;
 import net.anvisys.xpen.Login.LoginActivity;
 import net.anvisys.xpen.Object.Profile;
 
@@ -195,7 +196,8 @@ public class MainActivity extends AppCompatActivity {
             MainActivity.this.finish();
         } else if (myProfile.Role.matches("Individual") || myProfile.Role.matches("Employee") || myProfile.Role.matches("Manager") || myProfile.Role.matches("Admin")) {
 
-            Intent expenseIntent = new Intent(MainActivity.this, Dashboard2Activity.class);
+            //Intent expenseIntent = new Intent(MainActivity.this, Dashboard2Activity.class);
+            Intent expenseIntent = new Intent(MainActivity.this, HomeActivity.class);
             expenseIntent.putExtra("Parent", "Main");
             startActivity(expenseIntent);
             MainActivity.this.finish();

@@ -71,6 +71,7 @@
         <include
             android:id="@+id/bar3"
             layout="@layout/action_bar_admin" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

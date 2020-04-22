@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage.MyActivityFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:id="@+id/viewActivityTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Activity to add expense"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:background="@color/bg"
+            android:textColor="@color/colorPrimary"
+            />
+        <fragment
+            android:name="net.anvisys.xpen.fragments.ActivityFragment"
+            android:id="@+id/activityPager"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:background="#fff"
+            >
+
+        </fragment>
+        <include
+            android:id="@+id/bar1"
+            layout="@layout/action_bar_activity_project" />
+    </LinearLayout>
+</FrameLayout>

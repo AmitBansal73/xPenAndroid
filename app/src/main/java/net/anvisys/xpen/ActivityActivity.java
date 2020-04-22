@@ -219,12 +219,9 @@ public class ActivityActivity extends AppCompatActivity {
     {
         progressBar.setVisibility(View.VISIBLE);
         int RequestID=1;
-        String url = APP_CONST.APP_SERVER_URL + "api/Activity/Organization/" + myProfile.OrgID +"/Employee/"+myProfile.UserID+"/time/" + Session.GetProjectSyncTime(getApplicationContext());
-
+        String url = APP_CONST.APP_SERVER_URL + "api/Activity/Organization/" + myProfile.OrgID +"/Employee/"+myProfile.UserID+"/Status/" + "Open";
         try {
-
             RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-
             JsonObjectRequest jsArrayRequest = new JsonObjectRequest(Request.Method.GET, url, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {

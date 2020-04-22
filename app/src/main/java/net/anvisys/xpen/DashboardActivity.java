@@ -351,10 +351,12 @@ public class DashboardActivity extends AppCompatActivity implements ListenerInte
             return 0;
         }
     }
+
+
     public void OnAction(View v)
     {
         int id = v.getId();
-        if(id==R.id.actionAddExpense)
+        if(id==R.id.actionAddActivityExpense)
         {
             Intent newExpenseIntent = new Intent(DashboardActivity.this, AddExpenseActivity.class);
             newExpenseIntent.putExtra("Type", "Activity");

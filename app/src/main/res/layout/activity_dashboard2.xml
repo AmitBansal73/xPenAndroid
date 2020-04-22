@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -63,7 +64,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/viewTabs"
+                    android:id="@+id/viewActivityTab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
@@ -83,6 +84,34 @@
                     <fragment
                         android:name="net.anvisys.xpen.fragments.ActivityFragment"
                         android:id="@+id/activityPager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:background="#fff"
+                        >
+
+                    </fragment>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/viewProjectTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/project"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select Project to add expense"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:background="@color/bg"
+                        android:textColor="@color/colorPrimary"
+                        />
+                    <fragment
+                        android:name="net.anvisys.xpen.fragments.ProjectFragment"
+                        android:id="@+id/projecPager"
                         android:layout_width="wrap_content"
                         android:layout_height="120dp"
                         android:background="#fff"
@@ -131,7 +160,10 @@
                         android:textSize="18sp"
                         android:layout_marginLeft="5dp"
                         android:textColor="@color/nblue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         />
+
                     <TextView
                         android:id="@+id/txtActivity1"
                         android:layout_width="match_parent"
